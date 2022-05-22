@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -6,9 +7,14 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit, OnDestroy {
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
+  }
+
+  test(){
+    console.log("test");
+    this.router.navigate(['/','dashboard']);
   }
 
   ngOnDestroy() {
